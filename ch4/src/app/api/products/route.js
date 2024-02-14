@@ -4,7 +4,9 @@ export async function GET(req){
     // const requestHeaders = new Headers(req.headers);
     // console.log(requestHeaders)
     //  const {searchParams}= new URL(req.url);
-    const searchParams = req.nextUrl.searchParams 
-    console.log(searchParams);
+    // const searchParams = req.nextUrl.searchParams 
+    // console.log(searchParams);
+    const cook1 =req.cookies
+    console.log("Cookie1:",cook1);
     return NextResponse.json({"msg":"Ello ji Nextjs api"})
 }
