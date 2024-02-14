@@ -6,6 +6,7 @@ import LearnClientComponent from "../components/LearnClientComponent";
 import LearnGlobalCSS from "../components/LearnGlobalCSS";
 import LearnCSSModule from "@/components/LearnCSSModule";
 import LearnUseImage from "@/components/LearnUseImage";
+import LearnDataFetching from "@/components/LearnDataFetching";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -14,7 +15,8 @@ export default function Home() {
       <LearnServerComponent />
       <LearnGlobalCSS />
       <LearnCSSModule /> */}
-      <LearnUseImage />
+      {/* <LearnUseImage /> */}
+      <LearnDataFetching />
     </main>
   );
 }
