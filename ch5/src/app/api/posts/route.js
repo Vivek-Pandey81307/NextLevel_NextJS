@@ -1,5 +1,6 @@
 import {NextResponse} from 'next/server';
 import connectDB from '@/lib/connectDB.js';
+import  Post from '@/models/Post'
 export async function GET(req){
     try{
         await connectDB()
