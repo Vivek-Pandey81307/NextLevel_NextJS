@@ -1,11 +1,13 @@
 import {NextResponse} from 'next/server';
 import connectDB from '@/lib/connectDB.js';
-import  Post from '@/models/Post'
+import  PostModel from '@/models/Post'
 export async function GET(req){
     try{
         await connectDB()
-        return NextResponse.json({"msg":"success"},{status:200})
+        const result = await PostModel.findOne()
+        return NextResponse.json({"result":result},{"msg":"success"},{status:200})
     }catch(error){
+        console.log(error)
         return NextResponse.json({"msg":"something went wrong"},{status:400})
     }
 }
