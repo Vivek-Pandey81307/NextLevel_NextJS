@@ -10,7 +10,7 @@ const PostData = () => {
     }
     const  handleFormSubmit = async (e)=>{
         e.preventDefault();
-        const res = await fetch("",{
+        const res = await fetch("http://localhost:3000/api/posts",{
             method : "POST",
             body:JSON.stringify(formData)
         });console.log("Response: ",res)
