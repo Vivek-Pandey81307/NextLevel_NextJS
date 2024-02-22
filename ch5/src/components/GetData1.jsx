@@ -12,15 +12,16 @@ export default async function GetData1(){
     const allPosts = await getData()
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            {
-                allPosts.result.map((post,i)=>(
-                    <div key = {i}>
+           
+                {allPosts.result.map((post,i)=>(
+                    <div className="flex-block text-center" key = {i}>
                         <h1 className="text-red-500">{post.title}</h1>
                         <p>{post.body}</p>
                         <hr />
                     </div>
-                ))
-            }
+                ))}
+                
+            
         </main>
     )
 }

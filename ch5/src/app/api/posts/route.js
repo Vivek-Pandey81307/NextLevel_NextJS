@@ -14,14 +14,14 @@ export async function GET(req){
     }
 }
 
-// export async function POST(req){
-//     const body = await req.json()
-//     try{
-//         await connectDB()
-//         const result = await PostModel.create(body)
-//         return NextResponse.json({"result":result},{"msg":"success"},{status:201})
-//     }catch(error){
-//         console.log(error)
-//         return NextResponse.json({"msg":"something went wrong"},{status:400})
-//     }
-// }
+export async function POST(req){
+    const body = await req.json()
+    try{
+        await connectDB()
+        const result = await PostModel.create(body)
+        return NextResponse.json({"result":result},{"msg":"success"},{status:201})
+    }catch(error){
+        console.log(error)
+        return NextResponse.json({"msg":"something went wrong"},{status:400})
+    }
+}
